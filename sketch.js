@@ -20,9 +20,11 @@ function setup() {
 
 function draw() {  
   background(46, 139, 87);
-  if (keyWentDown(UP_ARROW)&&foods > 1){
-     writeStock(foods);
-     dog.addImage(happydog);
+  if (keyWentDown(UP_ARROW)){
+	 if(foods!==undefined&&foods>1){	 
+              writeStock(foods);
+              dog.addImage(happydog);
+	 }	 
   }
   drawSprites();
   textSize(20);
